@@ -1,0 +1,9 @@
+<template>
+	<lightning-input onchange={changeHandler} value={upperName} type="text" label="name" variant="label-hidden"
+		placeholder='Enter Name'>
+	</lightning-input>
+	<template if:true={containsNumber}>
+		<p class='errormessage'>Only text allowed</p>
+	</template>
+	<c-child name={upperName}></c-child>
+</template>
